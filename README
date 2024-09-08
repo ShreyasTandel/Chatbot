@@ -1,0 +1,27 @@
+# Follow this instruction before we run the chat_bot
+1. set OPENAI_API_KEY in config.json
+2. Create virtual environment and activate it
+3. Install requirements.txt (Compatible with python3.9)
+    pip install -r requirements.txt
+4. Run chat_bot.py
+    python chat_bot.py
+5. Server will run on 127.0.0.1:5000
+6. Set questions in example_questions.json in your file system
+    Ex; 
+        [
+            {
+            "question": "What is python?"
+            }
+        ]
+7. Have some PDF or JSON file to chat with.
+8. Use CURL API or send API through Postman and also Use here questions.json and PDF/JSON.
+    curl --location 'http://127.0.0.1:5000/QuestionAnswer' \
+    --form 'questions_file=@"/C:/Users/shrey/New/ChatBot/example_questions.json"' \
+    --form 'chat_document_file=@"/C:/Users/shrey/Downloads/python-basics-sample-chapters.pdf"'
+
+9. API Response will be like this.
+    [
+        {
+            "What is python?": " Python is a programming language that is known for being friendly and fun to learn. It is also used by many world-class companies and offers great career opportunities for programmers who master it."
+        }
+    ]

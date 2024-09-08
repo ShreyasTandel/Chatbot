@@ -1,0 +1,6 @@
+Flask==3.0.3
+langchain==0.2.16
+langchain_openai==0.1.23
+langchain_community==0.2.16
+pypdf==4.3.1
+chromadb==0.5.5
